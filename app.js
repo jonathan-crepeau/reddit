@@ -1,25 +1,35 @@
 // console.log('app.js reporting for duty..');
 // NOTE - Array.isArray(value):
 
-const userArray = [
+const usersArray = [
     {id: 0, name: "Jonathan"},
     {id: 1, name: "Jeremy"},
-    {id: 2, name: "Luna"}
+    {id: 2, name: "Luna"},
+    {id: 3, name: "Bruce"},
+    {id: 4, name: "Michele"},
+    {id: 5, name: "Ryan"},
+    {id: 6, name: "Kristen"},
+    {id: 7, name: "Cinnamon"}
 ];
 
-const userMealPreferences = [
-    {user_id: 0, food: "Pork Shoulder Stew"},
+const foodPreferences = [
+    {user_id: 0, food: "Ravioli"},
     {user_id: 1, food: "Pho"},
-    {user_id: 2, food: "Bonito Flakes"}
-];
+    {user_id: 2, food: "Tuna"},
+    {user_id: 3, food: "Baked Potato"},
+    {user_id: 4, food: "Avocado"},
+    {user_id: 5, food: "Mexican"},
+    {user_id: 6, food: "Smoothie"},
+    {user_id: 7, food: "Beef"},
+]
 
-const indexedObjOfObj = (inputArray) => {
-    const indexedObject = {};
+const newIndexedObj = (inputArray) => {
+    const newObject = {};
     for (let i = 0; i <= inputArray.length - 1; i++) {
-        indexedObject[i] = inputArray[i];
+        newObject[i] = inputArray[i];
     }
-    return indexedObject;
+    return newObject;
 }
 
-const newUserObj = indexedObjOfObj(userArray);
-console.log(newUserObj);
+const indexedUsersObj = newIndexedObj(usersArray);
+console.log(indexedUsersObj);
