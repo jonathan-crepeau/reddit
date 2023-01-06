@@ -13,14 +13,14 @@ const usersArray = [
 ];
 
 const foodPreferences = [
-    {user_id: 0, food: "Ravioli"},
-    {user_id: 1, food: "Pho"},
-    {user_id: 2, food: "Tuna"},
-    {user_id: 3, food: "Baked Potato"},
     {user_id: 4, food: "Avocado"},
-    {user_id: 5, food: "Mexican"},
-    {user_id: 6, food: "Smoothie"},
+    {user_id: 3, food: "Baked Potato"},
     {user_id: 7, food: "Beef"},
+    {user_id: 5, food: "Mexican"},    
+    {user_id: 1, food: "Pho"},
+    {user_id: 0, food: "Ravioli"},
+    {user_id: 6, food: "Smoothie"},
+    {user_id: 2, food: "Tuna"}
 ]
 
 const newIndexedObj = (inputArray) => {
@@ -33,3 +33,16 @@ const newIndexedObj = (inputArray) => {
 
 const indexedUsersObj = newIndexedObj(usersArray);
 console.log(indexedUsersObj);
+
+
+const matchPreferences = (inputArray) => {
+    for (let i = 0; i <= inputArray.length - 1; i++) {
+        let userInQuestion = indexedUsersObj[inputArray[i].user_id];
+        userInQuestion.foodPref = inputArray[i].food
+        // console.log(inputArray[i]);
+        // console.log(userInQuestion);
+    }
+}
+
+matchPreferences(foodPreferences);
+console.log(indexedUsersObj)
